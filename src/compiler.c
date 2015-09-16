@@ -1,9 +1,30 @@
+/**
+ * @file   compiler.c
+ * @author Benjamin James
+ * @date   15 September 2015
+ *
+ * @brief File containing the important
+ * compile function
+ */
+
 #include <stdlib.h>
 
 #include "common.h"
 
+/**
+ * @brief The size of the stack buffer
+ */
 #define BUF_SIZE 256
 
+/**
+ * @brief compiler function
+ *
+ * @param in Where to get the source code from
+ * @param out Where to print the assembly code
+ * @param stack_size The size of the loop stack
+ * @param array_size The size of the brainfuck internal array
+ * @return the success of this function, 0 on success, -1 on failure
+ */
 int compile(FILE *in, FILE *out, int stack_size, int array_size)
 {
 	int c, ret = 0;
