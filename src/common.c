@@ -22,11 +22,14 @@
  */
 int is_uint(const char *str)
 {
-	if (!*str)
+	if (!*str) {
 		return 0;
-	for (;*str; str++)
-		if (!isdigit(*str))
+	}
+	for (;*str; str++) {
+		if (!isdigit(*str)) {
 			return 0;
+		}
+	}
 	return 1;
 }
 
